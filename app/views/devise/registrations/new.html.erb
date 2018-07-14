@@ -7,7 +7,26 @@
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
-
+ <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :nickname %><br />
+    <%= f.text_field :nickname, autofocus: true, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :bday %><br />
+    <%= f.text_field :bday, autofocus: true, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.text_field :gender, autofocus: true, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number, autofocus: true, class: 'form-control' %>
+  </div>
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
