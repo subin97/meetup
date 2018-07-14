@@ -1,9 +1,8 @@
-<!--검색 결과 페이지-->
+<!--검색 완료 결과 페이지-->
 
 <html>
     <head>
-        <link rel="stylesheet" href="/css/time.css"></link>
-        <link href="/css/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/css/search.css" >
     </head>
     
     
@@ -12,16 +11,18 @@
             
            
            <div class="search_result">
-               <h2>검색 결과</h2>
+               <h3>검색 결과</h3>
                 <% if @search_dongari.nil? %>
                 <p>동아리 검색 결과가 없습니다. 그런 동아리 없어!.</p>
                 <% else %>
                     <% @search_dongari.each do |dongAri| %>
                         <div class="dongAri">
                             <div class="s_info col-lg-8 col-xs-12 align-middle">
-                                <h1><%= dongAri.name %></h1>
-                                <h2>#<%= dongAri.details %></h2>
-                                <h3><%= dongAri.host %></h3>
+                                <hr>
+                                <h1 class="dname" ><%= dongAri.name %></h1>
+                                <h2 class="details" style="color:#696969;">#<%= dongAri.details %></h2>
+                                <h3 class='host'>host : <%= dongAri.host %></h3>
+                                <hr>
                              </div>
                         </div>
                     <% end %>

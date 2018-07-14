@@ -8,6 +8,11 @@
 
 for i in 1..100
 DongAri.create([
-    { name: "고양이동아리#{i}", details: "안녕#{i} 고양이동아리 입니다.", host: "이동규#{i}"} ,
+    { name: "고양이동아리#{i}", details: "안녕하세요 우리는 고양이동아리 입니다.", host: "이동규#{i}"} ,
     ])
+end
+
+for i in 1..100
+MeetUp.create(dongArisId: '고양이동아리1')
+
 end
