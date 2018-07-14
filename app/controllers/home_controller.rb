@@ -4,6 +4,7 @@ class HomeController < ApplicationController
     def mypage
     end
     def search
+        @search_dongari = DongAri.search_for(params[:search_info])
     end
     def signin
     end
