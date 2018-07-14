@@ -1,0 +1,35 @@
+<!--검색 결과 페이지-->
+
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/time.css"></link>
+        <link href="/css/responsive.css" rel="stylesheet">
+    </head>
+    
+    
+   <body>
+        <div class="container">
+            
+           
+           <div class="search_result">
+               <h2>검색 결과</h2>
+                <% if @search_dongari.nil? %>
+                <p>동아리 검색 결과가 없습니다. 그런 동아리 없어!.</p>
+                <% else %>
+                    <% @search_dongari.each do |dongAri| %>
+                        <div class="dongAri">
+                            <div class="s_info col-lg-8 col-xs-12 align-middle">
+                                <h1><%= dongAri.name %></h1>
+                                <h2>#<%= dongAri.details %></h2>
+                                <h3><%= dongAri.host %></h3>
+                             </div>
+                        </div>
+                    <% end %>
+                <% end %>
+                <hr>
+            </div>
+        </div>
+    </body>
+    
+</html>
+
