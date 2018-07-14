@@ -15,12 +15,12 @@
       <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
       </div>
       <div class="col-lg-12 text-center">
-            <h1 class="section-heading text-uppercase">나의 Profile</h2><br>
+            <h1 class="section-heading text-uppercase"><%= current_user.name %>의 Profile</h2><br>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
           <div class="panel panel-info">
             <div class="panel-heading">
-              <h3 class="panel-title">박서준</h3>
+              <h3 class="panel-title"><%= current_user.name %></h3>
             </div>
             <div class="panel-body">
               <div class="row">
@@ -44,24 +44,24 @@
                     <tbody>
                       <tr>
                         <td>아이디</td>
-                        <td>seojun@naver.com</td>
+                        <td><%= current_user.email %></td>
                       </tr>
                       <tr>
                         <td>닉네임</td>
-                        <td>김비서가 왜그럴까</td>
+                        <td><%= current_user.nickname %></td>
                       </tr>
                       <tr>
                         <td>생년월일</td>
-                        <td>01/24/1988</td>
+                        <td><%= current_user.bday %></td>
                       </tr>
                    
                          <tr>
                              <tr>
                         <td>성별</td>
-                        <td>남</td>
+                        <td><%= current_user.gender %></td>
                       </tr>
                         <td>전화번호</td>
-                        <td>555-4567-890(Mobile)
+                        <td><%= current_user.phone_number %>
                         </td>
                            
                       </tr>
@@ -69,8 +69,8 @@
                     </tbody>
                   </table>
                   
-                  <a href="#" class="btn btn-primary">회원정보 변경</a>
-                  <a href="#" class="btn btn-primary">로그아웃</a>
+                  <a href="/users/edit" class="btn btn-primary">회원정보 변경</a>
+                  <a href="/users/sign_out" class="btn btn-primary">로그아웃</a>
                   <a href="#" class="btn btn-primary">계정 삭제</a>
                 </div>
               </div>
@@ -94,7 +94,7 @@
         <h3>Thumbnail label</h3>
         <p>...</p>
         <div style="display:inline">
-           <img src="/img/heart.png" id="button_">
+           <a href="/home/unlike/<%= %>"><img src="/img/heart.png" id="button_">
            <img src="/img/heart.png" id="button_">
          </div>
       </div>
@@ -102,9 +102,9 @@
   </div>
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img src="..." alt="...">
+      <img src="img/portfolio/05-thumbnail.jpg" alt="...">
       <div class="caption">
-        <h3>Thumbnail label</h3>
+        <h3>나침반</h3>
         <p>...</p>
         <div style="display:inline">
            <img src="/img/heart.png" id="button_">
@@ -115,9 +115,9 @@
   </div>
  <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img src="..." alt="...">
+      <img src="img/portfolio/06-thumbnail.jpg" alt="...">
       <div class="caption">
-        <h3>Thumbnail label</h3>
+        <h3>하트투하트</h3>
         <p>...</p>
         <div style="display:inline">
            <img src="/img/heart.png" id="button_">
@@ -150,7 +150,7 @@
                 <div class="timeline-panel">
                   <div class="timeline-heading">
                     <h4>07/16(일)</h4>
-                    <h4 class="subheading">동아리이름</h4>
+                    <h4 class="subheading">하트투하트</h4>
                   </div>
                   <div class="timeline-body">
                     <p class="text-muted">이러이러한 밋업이 있습니다</p>
